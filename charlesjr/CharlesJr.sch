@@ -1,0 +1,193 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:CharlesJr-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED D2
+U 1 1 553DC5F8
+P 3250 1900
+F 0 "D2" H 3250 2000 50  0000 C CNN
+F 1 "LED" H 3250 1800 50  0000 C CNN
+F 2 "LEDs:LED-0603" H 3250 1900 60  0001 C CNN
+F 3 "" H 3250 1900 60  0000 C CNN
+	1    3250 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 553DC627
+P 3550 1650
+F 0 "D3" H 3550 1750 50  0000 C CNN
+F 1 "LED" H 3550 1550 50  0000 C CNN
+F 2 "LEDs:LED-0603" H 3550 1650 60  0001 C CNN
+F 3 "" H 3550 1650 60  0000 C CNN
+	1    3550 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D5
+U 1 1 553DC641
+P 3900 1650
+F 0 "D5" H 3900 1750 50  0000 C CNN
+F 1 "LED" H 3900 1550 50  0000 C CNN
+F 2 "LEDs:LED-0603" H 3900 1650 60  0001 C CNN
+F 3 "" H 3900 1650 60  0000 C CNN
+	1    3900 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D4
+U 1 1 553DC661
+P 3550 2150
+F 0 "D4" H 3550 2250 50  0000 C CNN
+F 1 "LED" H 3550 2050 50  0000 C CNN
+F 2 "LEDs:LED-0603" H 3550 2150 60  0001 C CNN
+F 3 "" H 3550 2150 60  0000 C CNN
+	1    3550 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D6
+U 1 1 553DC687
+P 3900 2150
+F 0 "D6" H 3900 2250 50  0000 C CNN
+F 1 "LED" H 3900 2050 50  0000 C CNN
+F 2 "LEDs:LED-0603" H 3900 2150 60  0001 C CNN
+F 3 "" H 3900 2150 60  0000 C CNN
+	1    3900 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 553DC6A9
+P 2900 1900
+F 0 "D1" H 2900 2000 50  0000 C CNN
+F 1 "LED" H 2900 1800 50  0000 C CNN
+F 2 "LEDs:LED-0603" H 2900 1900 60  0001 C CNN
+F 3 "" H 2900 1900 60  0000 C CNN
+	1    2900 1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2900 1700 2900 1450
+Wire Wire Line
+	2900 1450 4250 1450
+Connection ~ 3550 1450
+Wire Wire Line
+	3250 1700 3250 1450
+Connection ~ 3250 1450
+Wire Wire Line
+	3550 1850 3550 1950
+Wire Wire Line
+	3900 1850 3900 1950
+Wire Wire Line
+	3550 1900 4250 1900
+Connection ~ 3550 1900
+Connection ~ 3900 1900
+Connection ~ 3900 1450
+Wire Wire Line
+	2900 2100 2900 2350
+Wire Wire Line
+	2900 2350 4250 2350
+Wire Wire Line
+	3250 2100 3250 2350
+Connection ~ 3250 2350
+Connection ~ 3550 2350
+Connection ~ 3900 2350
+$Comp
+L R R1
+U 1 1 553DC7B2
+P 4400 1450
+F 0 "R1" V 4480 1450 50  0000 C CNN
+F 1 "R" V 4400 1450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4330 1450 30  0001 C CNN
+F 3 "" H 4400 1450 30  0000 C CNN
+	1    4400 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 553DC7EB
+P 4400 1900
+F 0 "R2" V 4480 1900 50  0000 C CNN
+F 1 "R" V 4400 1900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4330 1900 30  0001 C CNN
+F 3 "" H 4400 1900 30  0000 C CNN
+	1    4400 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 553DC810
+P 4400 2350
+F 0 "R3" V 4480 2350 50  0000 C CNN
+F 1 "R" V 4400 2350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4330 2350 30  0001 C CNN
+F 3 "" H 4400 2350 30  0000 C CNN
+	1    4400 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X03 P1
+U 1 1 553DC856
+P 4950 1900
+F 0 "P1" H 4950 2100 50  0000 C CNN
+F 1 "CONN_01X03" V 5050 1900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x03" H 4950 1900 60  0001 C CNN
+F 3 "" H 4950 1900 60  0000 C CNN
+	1    4950 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1800 4750 1450
+Wire Wire Line
+	4750 1450 4550 1450
+Wire Wire Line
+	4750 1900 4550 1900
+Wire Wire Line
+	4750 2000 4750 2350
+Wire Wire Line
+	4750 2350 4550 2350
+$EndSCHEMATC

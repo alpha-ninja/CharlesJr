@@ -1,0 +1,73 @@
+Cmp-Mod V01 Created by Cvpcb (2015-04-20 BZR 5616)-product   date = Sunday, April 26, 2015 'PMt' 10:15:54 PM
+
+BeginCmp
+TimeStamp = /553DC6A9;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /553DC5F8;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /553DC627;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /553DC661;
+Reference = D4;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /553DC641;
+Reference = D5;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /553DC687;
+Reference = D6;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /553DC856;
+Reference = P1;
+ValeurCmp = CONN_01X03;
+IdModule  = Pin_Headers:Pin_Header_Angled_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /553DC7B2;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /553DC7EB;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /553DC810;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+EndListe

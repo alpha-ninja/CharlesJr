@@ -2,7 +2,7 @@
 
 A tiny PCB (0.25x0.25 inches), which charlieplexes (hence the name) 6 LEDs on 3 pins.
 
-It was created because that size happens to be OSHPark's lower size limit—it costs 31¢ for 3 (without components)
+It was created because that size happens to be OSHPark's lower size limit—it costs 30¢ for 3 (without components)
 
 It requires 3 resistors and 6 LEDs, both in 0603 format. It also uses a 3-pin header.
 

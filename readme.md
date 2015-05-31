@@ -17,3 +17,7 @@ The *2 in there is not usually used when calculating resistor values for LEDs. H
 Thus, for the LED and power supply in the example above, you would usually use a 100Ω resistor while this circuit would use 50Ω resistors.
 
 Enjoy!
+
+## LED groups, x/y values to control them:
+
+![image](connections.png)

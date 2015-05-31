@@ -2,8 +2,8 @@
 
 // Define the two CharlesJr boards.
 // The offsets are 2 and 5, the port is D for both.
-CharlesJr cjr(2, DDRD, PORTD);
-CharlesJr cjr2(5, DDRD, PORTD);
+CharlesJr cjr(2, 0b000, DDRD, PORTD);
+CharlesJr cjr2(5, 0b000, DDRD, PORTD);
 
 void setup() {
   // Set the LEDs on display 2 to a triangle shape.

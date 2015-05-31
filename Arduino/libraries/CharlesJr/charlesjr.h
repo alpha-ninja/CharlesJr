@@ -10,7 +10,7 @@
 
 class CharlesJr {
 	public:
-		CharlesJr(byte offset, volatile uint8_t &ddr_register, volatile uint8_t &port_register);
+		CharlesJr(byte offset, byte swapLeds, volatile uint8_t &ddr_register, volatile uint8_t &port_register);
 		void flash();
 		void ledOn(byte ledNum);
 		void off();
@@ -18,8 +18,13 @@ class CharlesJr {
 		void setPixel(byte x, byte y, bool state);
 		void setAll(bool state);
 		void setLeds(byte values);
-		static const byte _ledcodes[6];
 	private:
+		byte _ledcodes[6] = {0b00011001,
+							0b00110100,
+							0b00110010,
+							0b00101001,
+							0b00101100,
+							0b00011010};
 		byte _enabled;
 		byte _i;
 		byte _offset;

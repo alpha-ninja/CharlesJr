@@ -2,13 +2,13 @@
 CharlesJr	KEYWORD1
 
 # Methods and Functions
-flash 		KEYWORD2
-ledOn 	KEYWORD2
-off 	KEYWORD2
-display 		KEYWORD2
-setPixel 	KEYWORD2
-setAll 		KEYWORD2
-setLeds 	KEYWORD2
+flash	KEYWORD2
+ledOn	KEYWORD2
+off	KEYWORD2
+display	KEYWORD2
+setPixel	KEYWORD2
+setAll	KEYWORD2
+setLeds	KEYWORD2
 
 # Constants
 # none yet (LITERAL1)

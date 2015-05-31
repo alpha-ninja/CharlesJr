@@ -7,9 +7,9 @@
 #include "Arduino.h"
 #include "charlesjr.h"
 								
-//These are the pinout patterns for each LED.
-// They contain: 
+// Pinout patterns for each LED contain: 
 /*\
+|*|
 |*| 00 - for padding, bits are unused
 |*|
 |*| XXX - for DDR. 1 is output, 0 is input.
@@ -17,16 +17,25 @@
 |*|
 |*| XXX - for PORT. 1 is HIGH, 0 is LOW.
 |*|
+|*|  DEFAULT PIN ASSIGNMENT
+|*|
+|*|     x  y  |  #  |  pinout      |  group
+|*|     0  0  |  0  |  0b00011001  |  1
+|*|     0  1  |  1  |  0b00110100  |  3
+|*|     0  2  |  2  |  0b00110010  |  3
+|*|     1  0  |  3  |  0b00101001  |  2
+|*|     1  1  |  4  |  0b00101100  |  2
+|*|     1  2  |  5  |  0b00011010  |  1
+|*|
+|*| Use swapLeds to swap LED codes within a group.
+|*|
+|*|	LSB is group 1, then group 2, then group 3.
+|*|
+|*| For example, to swap groups 1 and 2: swapLeds = 0b011
+|*|
 \*/
-//TODO let user customize this
-const byte CharlesJr::_ledcodes[6] = {  0b00011001,
-										0b00110100,
-										0b00110010,
-										0b00101001,
-										0b00101100,
-										0b00011010};
 
-CharlesJr::CharlesJr(byte offset, volatile uint8_t &ddr_register, volatile uint8_t &port_register) {
+CharlesJr::CharlesJr(byte offset, byte swapLeds, volatile uint8_t &ddr_register, volatile uint8_t &port_register) {
 	// Set the offset to what is passed in the constructor
 	_offset = offset;
 	// _i is used as a counter
@@ -36,6 +45,27 @@ CharlesJr::CharlesJr(byte offset, volatile uint8_t &ddr_register, volatile uint8
 	_port_register = &port_register;
 	// Enable all LEDs at first
 	_enabled = 0b00111111;
+	// Swap LEDs in _ledcodes as requested
+	byte temp;
+	// For each bit in swapLeds:
+	for (_i = 0; _i < 3; _i++) {
+		// If the bit is enabled
+		if (swapLeds >> _i & 1 == 1) {
+			// Swap the bits.
+			// The whole modulo thing is necessary because
+			// group 1 contains #0 and #5. 
+			// (_i * 2 + 5) % 6 is equivalent to doing
+			// the following, but is quicker:
+			//
+			// _i * 2 - 1;
+			// if (_i < 0) {
+			//     _i += 6;
+			// }
+			temp = _ledcodes[(_i * 2 + 5) % 6];
+			_ledcodes[(_i * 2 + 5) % 6] = _ledcodes[_i * 2];
+			_ledcodes[_i * 2] = temp;
+		}
+	}
 }
 
 void CharlesJr::setLeds(byte enabled) {

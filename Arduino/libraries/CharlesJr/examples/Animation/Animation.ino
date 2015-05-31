@@ -2,7 +2,7 @@
 
 // Define the CharlesJr board.
 // The offset is 2, the port is D.
-CharlesJr cjr(2, DDRD, PORTD);
+CharlesJr cjr(2, 0b000, DDRD, PORTD);
 
 // Just a counter
 byte i = 0;

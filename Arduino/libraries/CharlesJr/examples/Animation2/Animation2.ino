@@ -1,9 +1,9 @@
 #include <charlesjr.h>
 
-// Define the CharlesJr board.
+// Define the two CharlesJr boards.
 // The offsets are 2 and 5, the port is D for both.
-CharlesJr cjr(2, DDRD, PORTD);
-CharlesJr cjr2(5, DDRD, PORTD);
+CharlesJr cjr(2, 0b000, DDRD, PORTD);
+CharlesJr cjr2(5, 0b000, DDRD, PORTD);
 
 // Just a counter
 byte i = 0;

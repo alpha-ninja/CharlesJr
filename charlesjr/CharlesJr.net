@@ -1,6 +1,5 @@
 (export (version D)
   (design
-    (source "/Users/johannes/Documents/pcbs, fritzing, and chips/charlesjr/CharlesJr.sch")
     (date "Wednesday, May 13, 2015 'PMt' 06:27:12 PM")
     (tool "Eeschema (2015-04-20 BZR 5616)-product")
     (sheet (number 1) (name /) (tstamps /)
